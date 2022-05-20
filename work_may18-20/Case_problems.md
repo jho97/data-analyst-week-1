@@ -28,18 +28,9 @@ GROUP BY a.category
 SELECT 
 SUM(CASE WHEN salary < 100000 THEN 1 ELSE 0) AS under_paid,
 SUM(CASE WHEN salary > 100000 AND salary < 160000 THEN 1 ELSE 0) AS paid_well,
-
-
-
-
-
-<!-- ------------------------------------------------------------------------------ -->
-
-
+SUM(CASE WHEN salary > 160000 THEN 1 ELSE 0 END) AS executive
+FROM employees
 
 
 <!-- ------------------------------------------------------------------------------ -->
 
-
-
-<!-- ------------------------------------------------------------------------------ -->
